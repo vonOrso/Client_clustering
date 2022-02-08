@@ -71,10 +71,59 @@ Customer personality analysis helps a business to modify its product based on it
 - Using KMeans(), we divide clients into 4 groups.
 ### Client groups
 ##### Group 1
-- Average income: 42527.09.
-- Family size: 3-4 persons.
-- Preferred shopping place: Website and store.
-- Average spent: 127.89
-- Average number of items purchased: 6.8
-- Participation in campaigns: Weak
-- 
+- Average income: 42527.09;
+- Family size: 3-4 persons;
+- Preferred shopping place: Website and store;
+- Average spent: 127.89;
+- Average number of items purchased: 6.8;
+- Participation in campaigns: Low;
+- Note: The company does not provide the goods necessary for this group, it consists of families with children, and the main product of the company is wine. This group is not the target audience and can only be attracted by expanding the range of products, which can only be considered in the very long term.
+##### Group 2
+- Average income: 76820.05;
+- Family size: 1-2 persons;
+- Preferred shopping place: Website, catalog and store;
+- Average spent: 1407.60;
+- Average number of items purchased: 19.37;
+- Participation in campaigns: High, use of discounts is very low;
+- Note: This group is the main clients of the company and the main target of promotional campaigns. This group rarely visits the website, it may be worth considering new approaches to keeping the audience on the site (simplification of functionality, updating recommender systems, etc.).
+##### Group 3
+- Average income: 30069.88;
+- Family size: 2-3 persons;
+- Preferred shopping place: Website and store;
+- Average spent: 	101.85;
+- Average number of items purchased: 5.9;
+- Participation in campaigns: Low;
+- Note: This is the youngest group, over time, clients from this group will flow into groups 1 and 4.
+##### Group 4
+- Average income: 59994.39;
+- Family size: 2-3 persons;
+- Preferred shopping place: Website and store;
+- Average spent: 	831.56;
+- Average number of items purchased: 18.35;
+- Participation in campaigns: moderate, high interest in discounts;
+- Note:This audience is very similar to group 2, but buys cheaper goods and has one child in the family. Often participates in promotional campaigns and has an interest in discounted products.
+### Visualizations
+The algorithm split the data into 4 almost identical clusters. Now we need to evaluate our groups.
+![download](https://user-images.githubusercontent.com/43719238/152992430-8f79c3a1-67c5-4d78-9211-a36402404623.png)
+
+The dependence of money spent in the store on income clearly shows the division of customers into clusters. The graph shows the usual relationship between these indicators, but group 1 is of some interest. The income of this group is higher than that of group 3, but the average amount of purchased goods is approximately equal. This group should be given more attention, most likely the company does not provide the goods necessary for this group or promotional companies do not take this group into account.
+![download](https://user-images.githubusercontent.com/43719238/152992646-1caf8cc0-ce8d-4705-9382-d9b403e902e7.png)
+
+The dependence of the number of purchases on their price indicates the difference between groups 2 and 4. Group 2 buys more expensive goods.
+![download](https://user-images.githubusercontent.com/43719238/152992737-6ae00b33-7dda-4224-bfd5-785a15ff881a.png)
+![download](https://user-images.githubusercontent.com/43719238/152992773-41415dac-2c8b-4769-94be-a2e9b546e566.png)
+
+Returning to group 1, we can assume that the company provides few products for families with children, so you can consider options for expanding the range to attract this group.
+![download](https://user-images.githubusercontent.com/43719238/152993093-8ff04673-0faa-4590-a147-8b5eea00f8a9.png)
+
+The most traded commodity is wine. The distribution of clusters for all products is approximately the same, but you can pay attention to meat products. The main consumer of these products is the group with the highest income. Most likely, the price of meat products is higher than in other stores.
+![download](https://user-images.githubusercontent.com/43719238/152993127-8cab7653-ba4e-44b0-8585-fb13d72f2001.png)
+
+The group with the highest income (Group 2) shows the greatest interest in campaigns. Most likely, these campaigns are created with an eye on these customers.
+![download](https://user-images.githubusercontent.com/43719238/152993188-0109f6a0-3056-4c7f-9e9e-591ee6f99c3d.png)
+
+I think we can conclude that the last campaign was the most successful and attracted a record number of customers. It seems to me that campaigns should focus not only on group 2, but also on group 4. This group is distinguished by lower income, having one child in the family and interest in discounts, but it is just as loyal as group 2.
+![download](https://user-images.githubusercontent.com/43719238/152993226-80022fc6-2ea0-4342-b264-1d7b14026670.png)
+
+### Conclusions
+The KMeans algorithm did a good job and divided the clients into groups. Each group has its own characteristics (private increase from its income) and preference when buying the company's products. These client groups can also be divided into subgroups by age, number of children, and included for a detailed study of clients.
